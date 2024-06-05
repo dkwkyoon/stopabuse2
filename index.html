@@ -74,18 +74,14 @@
 
 		/*체크박스파트*/
 		ul a{margin:auto; font-size:3.6rem; line-height: 1.25; display: block; text-align: center; align-items: center; justify-content: center; opacity: 1;}
-		ul b{margin: auto; text-align: center; display: flex; padding-top: 50px; justify-content:center;  }
+		ul b{margin: auto; text-align: center; display: flex; padding-top: 50px; justify-content:center;}
 
 
-		input[type="checkbox"]{width: 15px; height: 15px; margin: 2px 10px 4px 40px;}
+		input[type="checkbox"]{width: 50px; height: 50px; margin: 2px 10px 4px 40px;}
 		label{display: block;}
 		
 		#ch1:checked~#ba1{opacity:1;}
 		#ch2:checked~#ba1{opacity:2;}
-
-		.modify{margin:auto; font-family: 'Nanum Pen Script'; font-size:3.6rem; line-height: 1.25; display: block; text-align: center; align-items: center; justify-content: center; opacity: 0;}
-
-
 
 	
 		/* 그라디언트 */
@@ -107,7 +103,7 @@
 		.fontRed{color:#B00202;}
 		.aqua{color: lawngreen;}
 		.pen{background: aqua;}
-		.pink{color: hotpink;pink;}
+		.pink{color: hotpink;}
 		.blue{color: skyblue;}
 		.green{color: limegreen;}
 		.purple{color: palevioletred;}
@@ -206,74 +202,169 @@
 	  /*흐르는텍스트*/
          .flowCon {width: 100%;
     	 overflow: hidden;
+    	 width: 100vw;
    		 white-space: nowrap;
    		}
 
+    /*하울*/
 	    .flow1 {
 	    	top:0;
 	    	position: absolute;
-            animation: flow1 20s linear infinite;
+            animation: flow1 18s linear  infinite alternate;
         		}
 
 		@keyframes flow1 {
         from { left: 100%;}
-  		to {left:-100%;}}
+  		to {left:0%;}}
 
-
+    /*어레인지*/
         .flow2 {
             position: absolute;
-            animation: flow2 20s linear infinite;
-            top: 60;
+            animation: flow2 18s linear  infinite alternate;
+            top:0;
         }
 
 		@keyframes flow2 {
-        from { left: 90%;}
-  		to {left:-90%;}}
+        from { left: 30%;}
+  		to {left:-70%;}}
 
-
+    /*머스*/
   		 .flow3 {
             position: absolute;
-            animation: flow2 20s linear infinite;
-            top: 160;
-        }
+            animation: flow3 18s linear  infinite alternate;
+            padding-top: 100px;}
 
 		@keyframes flow3 {
-        from { left: 40%;}
-  		to {left:-140%;}}
+        from { left: 30%;}
+  		to {left:-60%;}}
 
+
+    /*아이디어*/
+  		.flow4 {
+            position: absolute;
+            animation: flow4 18s linear  infinite alternate;
+            padding-top: 100px;}
+
+		@keyframes flow4 {
+        from { left: 80%;}
+  		to {left:-10%;}}
     
+    /*오픈런*/
+    	.flow5 {
+            position: absolute;
+            animation: flow5 15s linear  infinite alternate;
+            padding-top: 290px;}
 
-	
+		@keyframes flow5 {
+        from { left: 40%;}
+  		to {left:-60%;}}
+    
+    /*아젠다*/
+    	.flow6 {
+            position: absolute;
+            animation: flow6 15s linear  infinite alternate;
+            padding-top: 290px;}
 
-          
+		@keyframes flow6 {
+        from { left: 90%;}
+  		to {left:-10%;}}
+    /*인볼브*/
+  		.flow7 {
+            position: absolute;
+            animation: flow7 18s linear  infinite alternate;
+            padding-top: 480px;}
+
+		@keyframes flow7 {
+        from { left: 105%;}
+  		to {left:5%;}}
+   
+    /*블렌딩*/
+  		.flow8 {
+            position: absolute;
+            animation: flow8 18s linear  infinite alternate;
+           padding-top: 125px;}
+
+		@keyframes flow8 {
+        from { left: 50%;}
+  		to {left:-50%;}}
+
+    /*MSGR*/
+		.flow9 {
+            position: absolute;
+            animation: flow9 11s linear  infinite alternate;
+            padding-top: 120px;
+         }
+
+		@keyframes flow9 {
+        from { left: 20%;}
+  		to {left:-40%;}}
+
+	/*니즈*/
+	.flow10 {
+            position: absolute;
+            animation: flow10 11s linear  infinite alternate;
+            padding-top: 120px;
+         }
+
+		@keyframes flow10 {
+        from { left: 60%;}
+  		to {left:0%;}}
+
+	/*날씨*/
+  	.flow11{position: absolute;
+            animation: flow11 18s linear  infinite alternate;
+         }
+
+         @keyframes flow11 {
+        from { left: 0%;}
+  		to {left:100%;}}
+
+  		/*퍼포먼스*/
+  	.flow12{position: absolute;
+            animation: flow12 15s linear  infinite alternate;
+         }
+
+         @keyframes flow12 {
+        from { left: 110%;}
+  		to {left: 10%;}}
+
+          /*스터디센터*/
+         .flow13{position: absolute;
+            animation: flow13 15s linear  infinite alternate;
+         }
+
+         @keyframes flow13 {
+        from { left: 90%;}
+  		to {left: -10%;}}
         
 
 
 	</style>
 </head>
 <body>
-	<section class="back_gra"> 	
+	<section class="back_gra" style="height: 1000px;"> 	
 			<div class="flowCon"><h2 class="gra1 flow1">명품 <span class="pen">하울 언박싱 브이로그</span></h2></div>
 			<div class="flowCon"><h2 class="gra1 flow2">회의 시간 오후 3시로 <span class="pen">어레인지</span>해 주세요</h2></div>
 			<div class="flowCon"><h2 class="gra2 flow3">올해의 <span class="pen">머스트 해브 아이템</span>이에요~</h2></div>
-			<h2 class="gra2">아이디어 조금만 더 <span class="pen">디벨롭</span>해서 <span class="pen">컨펌</span>받읍시다</h2>
-			<h2 class="gra3"><span class="pen">오픈런</span>해서 겨우 <span class="pen">바잉</span>했어요</h2>
-			<h2 class="gra3">오늘 회의 <span class="pen">아젠다</span>가 뭐죠?</h2>
-			<h2 class="gra3">이번 <span class="pen">프로젝트</span>에 <span class="pen">인볼브</span>되어 있으세요?</h2>
-			<h2 class="gra4">날씨 <span class="pen">이슈</span>로 비행기 안 뜬대</h2>
-			<h2 class="gra4">오늘 <span class="pen">라이브 커머스 퍼포먼스</span> 좋던데?</h2>
-			<h2 class="gra4">이것 두 개 <span class="pen">블렌딩</span>하면 너무 좋아요</h2>
-			<h2 class="gra5"><span class="pen">텐션</span> 올려~</h2>
-			<h2 class="gra5">사고 싶은 옷 <span class="pen">솔드아웃</span>됐어</h2>
-			<h2 class="gra6"><span class="pen">팔로워 니즈</span> 파악 후 <span class="pen">아이데이션하죠</span></h2>
-			<h2 class="gra7"><span class="pen">MSGR</span> 주문할게요</h2>
-			<h2 class="gra7">여기 <span class="pen">후르츠 산도</span> 맛있다</h2>
+			<div class="flowCon"><h2 class="gra2 flow4">아이디어 조금만 더 <span class="pen">디벨롭</span>해서 <span class="pen">컨펌</span>받읍시다</h2></div>
+			<div class="flowCon"><h2 class="gra3 flow5"><span class="pen">오픈런</span>해서 겨우 <span class="pen">바잉</span>했어요</h2></div>
+			<div class="flowCon"><h2 class="gra3 flow6">오늘 회의 <span class="pen">아젠다</span>가 뭐죠?</h2></div>
+			<div class="flowCon"><h2 class="gra5 flow7">이번 <span class="pen">프로젝트</span>에 <span class="pen">인볼브</span>되어 있으세요?</h2></div>
+			<div class="flowCon"><h2 class="gra2 flow11">날씨 <span class="pen">이슈</span>로 비행기 안 뜬대 <span style="padding-left:700px"><span class="pen">텐션</span> 올려~</h2></h2></div>
+			<div class="flowCon"><h2 class="gra3 flow12" style="padding-top:30px;">오늘 <span class="pen">라이브 커머스 퍼포먼스</span> 좋던데?</h2></div>
+			<div class="flowCon"><h2 class="gra5 flow8">이것 두 개 <span class="pen">블렌딩</span>하면 너무 좋아요</h2></div>
+			<div class="flowCon"><h2 class="gra4 flow13" style="padding-top:40px;"><span class="pen">스터디 센터</span>가서 공부하자</h2></div>
+			<div class="flowCon"><h2 class="gra6 flow9"><span class="pen">MSGR</span> 주문할게요</h2></div>
+			<div class="flowCon"><h2 class="gra6 flow10"><span class="pen">팔로워 니즈</span> 파악 후 <span class="pen">아이데이션하죠</span></h2></div>
+			<div class="flowCon"><h2 class="gra5" style="padding-top: 15px;">사고 싶은 옷 <span class="pen">솔드아웃</span>됐어</h2></div>
+			<div class="flowCon"><h2 class="gra7" style="padding-top: 60px;"> <span class="pen">아더 컬러</span>도 인기 많아요 <span style="padding-left:600px">여기 <span class="pen">후르츠 산도</span> 맛있다</div>
+			
 	</section>
 
-	<section class="back_black">
+	<section class="back_black" style="padding-top:300px;">
 		<div class="wrap">
 			<h1> 선 넘는 외국어, <br>여기 한국 맞나요?</h1>
-			<img style="margin: auto; display: block; align-items:center; height:700px; margin-bottom: 0;" src="text.png">
+			<img style="margin: auto; display: block; align-items:center; height:700px; margin-bottom: 0; padding-top:100px;" src="text.png">
 		</div>
 	</section>
 </body>
@@ -317,11 +408,19 @@
 	</div>
 
 	<div class="wrap flex btwnbox">
-		<div class="box" onmouseover="this.innerText = '확인'; " onmouseout="this.innerText = '컨펌'">컨펌</div> <div class="box" onmouseover="this.innerText = '되먹언'; " onmouseout="this.innerText = '피드백'">피드백</div> <div class="box" onmouseover="this.innerText = '짧은 영상(형식)'; " onmouseout="this.innerText = '숏폼'">숏폼</div> <div class="box" onmouseover="this.innerText = '선택'; " onmouseout="this.innerText = '초이스'">초이스</div> <div class="box" onmouseover="this.innerText = '독서실'; " onmouseout="this.innerText = '스터디 센터'">스터디 센터</div>
+		<div class="box" onmouseover="this.innerText = '확인'; " onmouseout="this.innerText = '컨펌'">컨펌</div> <div class="box" onmouseover="this.innerText = '되먹임'; " onmouseout="this.innerText = '피드백'">피드백</div> <div class="box" onmouseover="this.innerText = '짧은 영상(형식)'; " onmouseout="this.innerText = '숏폼'">숏폼</div> <div class="box" onmouseover="this.innerText = '선택'; " onmouseout="this.innerText = '초이스'">초이스</div> <div class="box" onmouseover="this.innerText = '독서실'; " onmouseout="this.innerText = '스터디 센터'">스터디 센터</div>
 	</div>
 </section>
 
+<style>
+	.box:hover{background: white; color: #B00202;}
+	.bbox:hover{background: white;}
+	.pbox:hover{background: white;}
+	.gbox:hover{background: white;}
+	.tbox:hover{background: white;}
+	.obox:hover{background: white;}
 
+</style>
 <section>
 	<div class="wrap btwn underPad">
 	<h3>과한 외국어,<br>뭐가 <span class="fontRed">문제</span>일까?</h3></div>
@@ -349,12 +448,12 @@
 
 <style>
 
-		.backopa1{width: 100%; height: 500px; background: url(good.png); opacity: 0.3;
+		.backopa1{width: 100%; height: 700px; background: url(good.png); opacity: 0.3;
 		 background-size: 250px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; padding: 0;}
-    .backopa2{width: 100%; height: 500px; background: url(bad.png); opacity: 0.3;
+    .backopa2{width: 100%; height: 700px; background: url(bad.png); opacity: 0.3;
 		 background-size: 250px;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -393,7 +492,7 @@
 		</div>
 		<div class="wrap btwnbox"> <h4 class="noMar">기준: 직관적으로 이해하기 쉬움, 형태적으로 짧음</h4></div>
 	<div class="wrap flex btwnbox">
-		<div class="box" onmouseover="this.innerText = '리플'; " onmouseout="this.innerText = '댓글'">댓글</div> <div class="box" onmouseover="this.innerText = '언택트'; " onmouseout="this.innerText = '비대면'">비대면</div> <div class="box" onmouseover="this.innerText = '신입생'; " onmouseout="this.innerText = '새내기'">새내기</div> <div class="box" onmouseover="this.innerText = '보이스피싱'; " onmouseout="this.innerText = '전화 금융 사기'">전화 금융 사기</div> <div class="box" onmouseover="this.innerText = 'ESG 경영'; " onmouseout="this.innerText = '환경 사회 투명 경영'">환경 사회 투명<br>경영</div>
+		<div class="box" onmouseover="this.innerText = '리플'; " onmouseout="this.innerText = '댓글'">댓글</div> <div class="box" onmouseover="this.innerText = '언택트'; " onmouseout="this.innerText = '비대면'">비대면</div> <div class="box" onmouseover="this.innerText = '신입생'; " onmouseout="this.innerText = '새내기'">새내기</div> <div class="box" onmouseover="this.innerText = '보이스피싱'; " onmouseout="this.innerText = '전화 금융 사기'">전화 금융 사기</div> <div class="box" onmouseover="this.innerText = 'ESG 경영'; " onmouseout="this.innerText = '환경 사회 투명 경영'">환경 사회 투명 경영</div>
 	</div>
 	<div class="wrap flex btwnbox">
 		<div class="box"  onmouseover="this.innerText = '네티즌'; " onmouseout="this.innerText = '누리꾼'">누리꾼</div> <div class="box" onmouseover="this.innerText = '자동 제세동기'; " onmouseout="this.innerText = '심장 충격기'">심장 충격기</div> <div class="box" onmouseover="this.innerText = '스크린 도어'; " onmouseout="this.innerText = '안전문'">안전문</div> <div class="box" onmouseover="this.innerText = '블랙 아이스'; " onmouseout="this.innerText = '도로 살얼음'">도로 살얼음</div> <div class="box" onmouseover="this.innerText = '키스 앤드 라이드'; " onmouseout="this.innerText = '환승 정차 구역'">환승 정차 구역</div>
@@ -464,7 +563,7 @@
 		<img style="margin: auto; display: block; width: 60vw; padding-bottom: 50px;" src="poster.gif"></div>
 
 	<div class="wrap" style="word-break: keep-all; font-family: Pretendard-Medium;"><p>국어기본법 제14조 1항에 의거하면 공공기관 등은 공문서를 일반 국민이 알기 쉬운 용어와 문장으로 써야 하며, 어문규범에 맞추어 한글로 작성해야 한다.</p>
-<p>그러나 한글문화연대에 따르면 2022년 1월부터 8월까지 중앙정부기관에서 낸 보도자료 1만1918건 가운데 5501건에서 외국어 표현·표기 남용이 확인됐다.‘가이드라인’, ‘거버넌스', ‘아카이브’ 등이 대표적이다. 서은아 상명대 계당교양교육원 교수는 “오랫동안 공공 언어 사용 실태를 평가하고 연구해왔지만 공공기관이 발표하는 사업과 정책의 이름은 매년 낯설다”며 “‘Safety House 구축 사업’, ‘스마트팜 테스트베드 교육장’, ‘원도심 아프프리마켓’, ‘손愛손 Job Go’ 등 사업 뜻을 짐작하기 어렵거나 배경을 이해할 수 없는 것들이 태반”이라고 지적했다. 또한 대체할 수 있는 단어가 있음에도 영어를 쓰는 경우도 많았다. 2019년, 광주지자체가 추진하는 사업 명칭에 대한 지적이 있었다. 헌책방 르네상스, 클린업 동구와 같은 외래어 혼용사례가 많았다. 다른 지자체나 기업에서도 '** 페스티벌', '** 버스킹' 등과 같은 사업명이 자주 등장했다. 2020년 7월에는 교육부의 사업 명칭이 논란이 되기도 했다. '그린스마트 미래학교', '블렌디드 러닝'이 중심에 있었다. 사업 내용을 확인해보면 결국 '친환경 첨단 학교'와 '온ㆍ오프라인 수업 병행'을 뜻한다. 공공기관 홍보 대행사에서 일하는 김유진 씨도 “가끔은 정부가 주도적으로 외국어 사용을 권장하는 것이 아닐까 싶은 생각이 들기도 한다”면서 “기업이나 브랜드에서 마케팅의 수단으로 활용하는 상술의 관점이 공공의 영역에 들어가 있는 모양새다. 관료사회다 보니 지금의 결과를 내는 데 급급해 놓치는 것이 많은 것 같다”고 아쉬움을 표했다.</p>
+<p>그러나 한글문화연대에 따르면 2022년 1월부터 8월까지 중앙정부기관에서 낸 보도자료 1만1918건 가운데 5501건에서 외국어 표현·표기 남용이 확인됐다.‘가이드라인’, ‘거버넌스’, ‘아카이브’ 등이 대표적이다. 서은아 상명대 계당교양교육원 교수는 “오랫동안 공공 언어 사용 실태를 평가하고 연구해왔지만 공공기관이 발표하는 사업과 정책의 이름은 매년 낯설다”며 “‘Safety House 구축 사업’, ‘스마트팜 테스트베드 교육장’, ‘원도심 아프프리마켓’, ‘손愛손 Job Go’ 등 사업 뜻을 짐작하기 어렵거나 배경을 이해할 수 없는 것들이 태반”이라고 지적했다. 또한 대체할 수 있는 단어가 있음에도 영어를 쓰는 경우도 많았다. 2019년, 광주지자체가 추진하는 사업 명칭에 대한 지적이 있었다. 헌책방 르네상스, 클린업 동구와 같은 외래어 혼용사례가 많았다. 다른 지자체나 기업에서도 ‘** 페스티벌’, ‘** 버스킹’ 등과 같은 사업명이 자주 등장했다. 2020년 7월에는 교육부의 사업 명칭이 논란이 되기도 했다. ‘그린스마트 미래학’, ‘블렌디드 러닝’이 중심에 있었다. 사업 내용을 확인해보면 결국 ‘친환경 첨단 학교’와 ‘온ㆍ오프라인 수업 병행’을 뜻한다. 공공기관 홍보 대행사에서 일하는 김유진 씨도 “가끔은 정부가 주도적으로 외국어 사용을 권장하는 것이 아닐까 싶은 생각이 들기도 한다”면서 “기업이나 브랜드에서 마케팅의 수단으로 활용하는 상술의 관점이 공공의 영역에 들어가 있는 모양새다. 관료사회다 보니 지금의 결과를 내는 데 급급해 놓치는 것이 많은 것 같다”고 아쉬움을 표했다.</p>
 
 
 

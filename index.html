@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-pen.css" rel="stylesheet">
+	<title>선 넘는 외국어</title>
+
+
+	<style type="text/css"> 
+		html{margin: 0; padding: 0;}
+
+		@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+		@font-face {
+			    font-family: 'Pretendard-Medium';
+			    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+			    font-weight: 500;
+			    font-style: normal;
+			}
+
+		@font-face {
+		    font-family: 'Pretendard-SemiBold';
+		    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+		    font-weight: 600;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'Pretendard-Bold';
+		    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+		    font-weight: 700;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'Pretendard-ExtraBold';
+		    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+		    font-weight: 800;
+		    font-style: normal;
+		}
+
+	    .nanum {
+	    	font-family: 'Nanum Pen Script', system-ui;
+	    	font-style: normal; margin:auto; font-size:3.8rem; line-height: 1.3; display: block; text-align: center;}
+
+	    .checkfont{font-size: 0.97rem; display: block; font-family: 'Prentedard-Regular';}
+
+
+
+	   body,a,b{margin: 0; padding: 0;}
+	   section{padding: 85px 0px;}
+		.wrap {margin: auto; width: 1000px;}
+		.overwrap{margin: auto; width: 1000px;}
+		.flex {display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between;}
+		.flexCheck {display: flex; align-items: center; flex-wrap: wrap; justify-content: center;} 
+		.flexHalf {display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; }
+		.center{text-align: center; margin: auto; padding: 0;}
+
+		h1,h2,h3{font-family: 'Pretendard-ExtraBold';}
+		h5 {font-family: 'Pretendard-SemiBold';}
+		h4,p{font-family: 'Pretendard-Medium';}
+		ul a{font-family: 'Nanum Pen Script';}
+		ul b{font-family: 'Pretendard-Regular';}
+		h1{color:white; text-align: center; font-size: 4.6rem; line-height: 1.33;} /* 타이틀 */
+		h2{padding: 6px; font-size: 3.3rem;} /* 문장 나열 */
+		h3{font-size: 2.8rem; line-height: 1.23; font-weight: 700; margin: 0;} /* 제목 */
+		h4{font-weight: 200; color:white; font-size:0.85rem; padding: 23px 490px 0px 0px;} /*안내문*/
+		h5{font-size: 2.2rem; text-align: center; display: block;} /*원인*/
+		p{line-height: 1.67; font-size: 1.2rem; display: block; color: black; padding: 0px 35px 0px 35px}
+		
+
+		/*체크박스파트*/
+		ul a{margin:auto; font-size:3.6rem; line-height: 1.25; display: block; text-align: center; align-items: center; justify-content: center; opacity: 1;}
+		ul b{margin: auto; text-align: center; display: flex; padding-top: 50px; justify-content:center;}
+
+
+		input[type="checkbox"]{width: 50px; height: 50px; margin: 2px 10px 4px 40px;}
+		label{display: block;}
+		
+		#ch1:checked~#ba1{opacity:1;}
+		#ch2:checked~#ba1{opacity:2;}
+
+	
+		/* 그라디언트 */
+		.gra1{color: black;}
+		.gra2{color:#424242;}
+		.gra3{color:#616161;}
+		.gra4{color:#A5A5A5;}
+		.gra5{color:#BCBCBC;}
+		.gra6{color: #c0c0c0;}
+		.gra7{color: #AEAEAE;}
+
+		/* 배경 */
+		.back_gra{background: linear-gradient(white 47%, black 100%);}
+		.back_black{background: black;}
+		.back_red{background: #B00202; color: white;}
+
+		/*글씨색*/
+		.fontWhite{color: white;}
+		.fontRed{color:#B00202;}
+		.aqua{color: lawngreen;}
+		.pen{background: aqua;}
+		.pink{color: hotpink;}
+		.blue{color: skyblue;}
+		.green{color: limegreen;}
+		.purple{color: palevioletred;}
+		.orange{color: orange;}
+		.tan{color: tan;}
+
+		/* 이미지 */
+		.imgsize{display: block; width: 300px; padding: 0;}
+		.good{
+			opacity: 0.4;
+			display: block; 
+			background: url(good.png);
+			background-size: 250px;
+   			 background-repeat: no-repeat;
+   			 background-attachment: fixed;
+   			 background-position: center;}
+
+    .bad{display: block; 
+			background: url(bad.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;}
+
+		/* 여백 */
+		.morePad{padding: 250px 0px;}
+		.btwnbox{padding-bottom: 35px;}
+		.underPad{padding-bottom: 80px;}
+		.noMar{margin: 0; padding: 0;}
+		.lessPad{padding-bottom:14px;}
+		.down{padding-top: 535px;} /*체크박스*/
+
+
+		/*도형*/
+		.box{display: flex; width: 172px; height: 57px; border: 2px solid white; border-radius: 70px; align-items: center; justify-content: center; text-align: center;
+			color: white; font-family: 'Pretendard-Bold'; font-size: 1.26rem;}
+
+		.bbox{display: flex; width: 172px; height: 57px; border: 2px solid skyblue; border-radius: 70px; align-items: center; justify-content: center; text-align: center;
+			color: white; font-family: 'Pretendard-Bold'; font-size: 1.26rem; color: skyblue;}
+
+		.pbox{display: flex; width: 172px; height: 57px; border: 2px solid hotpink; border-radius: 70px; align-items: center; justify-content: center; text-align: center;
+			color: white; font-family: 'Pretendard-Bold'; font-size: 1.26rem; color: hotpink;}
+
+
+		.gbox{display: flex; width: 172px; height: 57px; border: 2px solid limegreen; border-radius: 70px; align-items: center; justify-content: center; text-align: center;
+			color: white; font-family: 'Pretendard-Bold'; font-size: 1.26rem; color: limegreen;}
+
+
+		.vbox{display: flex; width: 172px; height: 57px; border: 2px solid palevioletred; border-radius: 70px; align-items: center; justify-content: center; text-align: center;
+			color: white; font-family: 'Pretendard-Bold'; font-size: 1.26rem; color: palevioletred;}
+
+
+		.obox{display: flex; width: 172px; height: 57px; border: 2px solid orange; border-radius: 70px; align-items: center; justify-content: center; text-align: center;
+			color: white; font-family: 'Pretendard-Bold'; font-size: 1.26rem; color: orange;}
+
+		.tbox{display: flex; width: 172px; height: 57px; border: 2px solid tan; border-radius: 70px; align-items: center; justify-content: center; text-align: center;
+			color: white; font-family: 'Pretendard-Bold'; font-size: 1.26rem; color: tan;}
+
+		/*이유*/
+		.flexHalf div{margin: auto; width: 50%;}
+		.reasonBox1{
+						position: absolute;
+						display:flex;
+            color: white;
+            width: 420px;
+            height: 510px;
+            background-color: #B00202; 
+						align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            margin:auto;}
+
+    .reasonBox2{
+						position: absolute;
+						display:flex;
+            color: white;
+            width: 420px;
+            height: 510px;
+            background-color: #B00202; 
+						align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+          	margin:auto;}
+
+   		 .reason1, .reason2{position: relative; display: flex; align-items: center; justify-content: center; background: white; border-radius: 50px; border: 3.7px solid #B00202; width: 346px; height: 506px; color: black; margin-top:0; margin-bottom:0; }
+
+    .reason2{margin-right: 0px; }
+
+	  .reasonBox1:hover.reasonBox1{opacity: 0;}
+	  .reasonBox2:hover.reasonBox2{opacity: 0;}
+
+	  .opa{opacity: 0.4}
+
+	  .ab{position: absolute;}
+	  .rela{position: relative;}
+
+	  /*흐르는텍스트*/
+         .flowCon {width: 100%;
+    	 overflow: hidden;
+    	 width: 100vw;
+   		 white-space: nowrap;
+   		}
+
+    /*하울*/
+	    .flow1 {
+	    	top:0;
+	    	position: absolute;
+            animation: flow1 18s linear  infinite alternate;
+        		}
+
+		@keyframes flow1 {
+        from { left: 100%;}
+  		to {left:0%;}}
+
+    /*어레인지*/
+        .flow2 {
+            position: absolute;
+            animation: flow2 18s linear  infinite alternate;
+            top:0;
+        }
+
+		@keyframes flow2 {
+        from { left: 30%;}
+  		to {left:-70%;}}
+
+    /*머스*/
+  		 .flow3 {
+            position: absolute;
+            animation: flow3 18s linear  infinite alternate;
+            padding-top: 100px;}
+
+		@keyframes flow3 {
+        from { left: 30%;}
+  		to {left:-60%;}}
+
+
+    /*아이디어*/
+  		.flow4 {
+            position: absolute;
+            animation: flow4 18s linear  infinite alternate;
+            padding-top: 100px;}
+
+		@keyframes flow4 {
+        from { left: 80%;}
+  		to {left:-10%;}}
+    
+    /*오픈런*/
+    	.flow5 {
+            position: absolute;
+            animation: flow5 15s linear  infinite alternate;
+            padding-top: 290px;}
+
+		@keyframes flow5 {
+        from { left: 40%;}
+  		to {left:-60%;}}
+    
+    /*아젠다*/
+    	.flow6 {
+            position: absolute;
+            animation: flow6 15s linear  infinite alternate;
+            padding-top: 290px;}
+
+		@keyframes flow6 {
+        from { left: 90%;}
+  		to {left:-10%;}}
+    /*인볼브*/
+  		.flow7 {
+            position: absolute;
+            animation: flow7 18s linear  infinite alternate;
+            padding-top: 480px;}
+
+		@keyframes flow7 {
+        from { left: 105%;}
+  		to {left:5%;}}
+   
+    /*블렌딩*/
+  		.flow8 {
+            position: absolute;
+            animation: flow8 18s linear  infinite alternate;
+           padding-top: 125px;}
+
+		@keyframes flow8 {
+        from { left: 50%;}
+  		to {left:-50%;}}
+
+    /*MSGR*/
+		.flow9 {
+            position: absolute;
+            animation: flow9 11s linear  infinite alternate;
+            padding-top: 120px;
+         }
+
+		@keyframes flow9 {
+        from { left: 20%;}
+  		to {left:-40%;}}
+
+	/*니즈*/
+	.flow10 {
+            position: absolute;
+            animation: flow10 11s linear  infinite alternate;
+            padding-top: 120px;
+         }
+
+		@keyframes flow10 {
+        from { left: 60%;}
+  		to {left:0%;}}
+
+	/*날씨*/
+  	.flow11{position: absolute;
+            animation: flow11 18s linear  infinite alternate;
+         }
+
+         @keyframes flow11 {
+        from { left: 0%;}
+  		to {left:100%;}}
+
+  		/*퍼포먼스*/
+  	.flow12{position: absolute;
+            animation: flow12 15s linear  infinite alternate;
+         }
+
+         @keyframes flow12 {
+        from { left: 110%;}
+  		to {left: 10%;}}
+
+          /*스터디센터*/
+         .flow13{position: absolute;
+            animation: flow13 15s linear  infinite alternate;
+         }
+
+         @keyframes flow13 {
+        from { left: 90%;}
+  		to {left: -10%;}}
+        
+
+
+	</style>
+</head>
+<body>
+	<section class="back_gra" style="height: 1000px;"> 	
+			<div class="flowCon"><h2 class="gra1 flow1">명품 <span class="pen">하울 언박싱 브이로그</span></h2></div>
+			<div class="flowCon"><h2 class="gra1 flow2">회의 시간 오후 3시로 <span class="pen">어레인지</span>해 주세요</h2></div>
+			<div class="flowCon"><h2 class="gra2 flow3">올해의 <span class="pen">머스트 해브 아이템</span>이에요~</h2></div>
+			<div class="flowCon"><h2 class="gra2 flow4">아이디어 조금만 더 <span class="pen">디벨롭</span>해서 <span class="pen">컨펌</span>받읍시다</h2></div>
+			<div class="flowCon"><h2 class="gra3 flow5"><span class="pen">오픈런</span>해서 겨우 <span class="pen">바잉</span>했어요</h2></div>
+			<div class="flowCon"><h2 class="gra3 flow6">오늘 회의 <span class="pen">아젠다</span>가 뭐죠?</h2></div>
+			<div class="flowCon"><h2 class="gra5 flow7">이번 <span class="pen">프로젝트</span>에 <span class="pen">인볼브</span>되어 있으세요?</h2></div>
+			<div class="flowCon"><h2 class="gra2 flow11">날씨 <span class="pen">이슈</span>로 비행기 안 뜬대 <span style="padding-left:700px"><span class="pen">텐션</span> 올려~</h2></h2></div>
+			<div class="flowCon"><h2 class="gra3 flow12" style="padding-top:30px;">오늘 <span class="pen">라이브 커머스 퍼포먼스</span> 좋던데?</h2></div>
+			<div class="flowCon"><h2 class="gra5 flow8">이것 두 개 <span class="pen">블렌딩</span>하면 너무 좋아요</h2></div>
+			<div class="flowCon"><h2 class="gra4 flow13" style="padding-top:40px;"><span class="pen">스터디 센터</span>가서 공부하자</h2></div>
+			<div class="flowCon"><h2 class="gra6 flow9"><span class="pen">MSGR</span> 주문할게요</h2></div>
+			<div class="flowCon"><h2 class="gra6 flow10"><span class="pen">팔로워 니즈</span> 파악 후 <span class="pen">아이데이션하죠</span></h2></div>
+			<div class="flowCon"><h2 class="gra5" style="padding-top: 15px;">사고 싶은 옷 <span class="pen">솔드아웃</span>됐어</h2></div>
+			<div class="flowCon"><h2 class="gra7" style="padding-top: 60px;"> <span class="pen">아더 컬러</span>도 인기 많아요 <span style="padding-left:600px">여기 <span class="pen">후르츠 산도</span> 맛있다</div>
+			
+	</section>
+
+	<section class="back_black" style="padding-top:300px;">
+		<div class="wrap">
+			<h1> 선 넘는 외국어, <br>여기 한국 맞나요?</h1>
+			<img style="margin: auto; display: block; align-items:center; height:700px; margin-bottom: 0; padding-top:100px;" src="text.png">
+		</div>
+	</section>
+</body>
+
+
+
+<section class="morePad">
+	<div class="wrap flex">
+		<div> <a href="https://www.youtube.com/watch?v=Zi9Fxy3XuBE" target="_new">
+			<img class="imgsize" src="news_1.png"></a> </div>
+
+	<div> <a href="https://www.youtube.com/watch?app=desktop&v=3kSafscpDLM" target="_new">
+			<img class="imgsize"  src="news_2.png"></a> </div>	
+
+
+	<div> <a href="https://www.youtube.com/watch?app=desktop&v=PcDPUFIdiBQ" target="_new">
+			<img class="imgsize"  src="news_3.png"></a>	</div>
+</div>
+</section>
+
+<section class="back_red">
+	<div class="wrap flex btwnbox">
+		<h3>과한 외국어 </h3>
+		<h4>단어에 마우스를 갖다 대어 어떤 뜻인지 확인해 보세요</h4>
+	</div>
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '찹쌀떡'; " onmouseout="this.innerText = '모찌'">모찌</div> 
+		<div class="box" onmouseover="this.innerText = '자녀 학원, 학교 차량 기다리는 곳'; " onmouseout="this.innerText = '맘스스테이션'">맘스스테이션</div> 
+		<div class="box" onmouseover="this.innerText = '과일 샌드위치'; " onmouseout="this.innerText = '후르츠 산도'">후르츠 산도</div> 
+		<div class="box" onmouseover="this.innerText = '품절'; " onmouseout="this.innerText = '솔드 아웃'">솔드 아웃</div> 
+		<div class="box" onmouseover="this.innerText = '다른 색상'; " onmouseout="this.innerText = '아더 컬러'">아더 컬러</div>
+		</div>
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '발전'; " onmouseout="this.innerText = '디벨롭'">디벨롭</div> <div class="box" onmouseover="this.innerText = '입소문'; " onmouseout="this.innerText = '바이럴'">바이럴</div> <div class="box" onmouseover="this.innerText = '구매'; " onmouseout="this.innerText = '바잉'">바잉</div> <div class="box" onmouseover="this.innerText = '개봉'; " onmouseout="this.innerText = '언박싱'">언박싱</div> <div class="box" onmouseover="this.innerText = '선택권'; " onmouseout="this.innerText = '옵션'">옵션</div>
+	</div>
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '빵집'; " onmouseout="this.innerText = '베이커리'">베이커리</div> <div class="box" onmouseover="this.innerText = '요구 사항'; " onmouseout="this.innerText = '니즈'">니즈</div> <div class="box" onmouseover="this.innerText = '성과'; " onmouseout="this.innerText = '퍼포먼스'">퍼포먼스</div> <div class="box"onmouseover="this.innerText = '문제'; " onmouseout="this.innerText = '이슈'">이슈</div> <div class="box" onmouseover="this.innerText = '정원'; " onmouseout="this.innerText = '헤미쉬 가든'">헤미쉬 가든</div>
+	</div>
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '경로당'; " onmouseout="this.innerText = '시니어 클럽'">시니어 클럽</div> <div class="box" onmouseover="this.innerText = '실시간 전자상거래'; " onmouseout="this.innerText = '라이브 커머스'">라이브 커머스</div> <div class="box" onmouseover="this.innerText = '개장 질주'; " onmouseout="this.innerText = '오픈런'">오픈런</div> <div class="box" onmouseover="this.innerText = '물체, 대상'; " onmouseout="this.innerText = '오브제'">오브제</div> <div class="box" onmouseover="this.innerText = '국립 추모 공원'; " onmouseout="this.innerText = '네셔널 메모리얼 파크'">네셔널 메모리얼 파크</div>
+	</div>
+
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '확인'; " onmouseout="this.innerText = '컨펌'">컨펌</div> <div class="box" onmouseover="this.innerText = '되먹임'; " onmouseout="this.innerText = '피드백'">피드백</div> <div class="box" onmouseover="this.innerText = '짧은 영상(형식)'; " onmouseout="this.innerText = '숏폼'">숏폼</div> <div class="box" onmouseover="this.innerText = '선택'; " onmouseout="this.innerText = '초이스'">초이스</div> <div class="box" onmouseover="this.innerText = '독서실'; " onmouseout="this.innerText = '스터디 센터'">스터디 센터</div>
+	</div>
+</section>
+
+<style>
+	.box:hover{background: white; color: #B00202;}
+	.bbox:hover{background: white;}
+	.pbox:hover{background: white;}
+	.gbox:hover{background: white;}
+	.tbox:hover{background: white;}
+	.obox:hover{background: white;}
+
+</style>
+<section>
+	<div class="wrap btwn underPad">
+	<h3>과한 외국어,<br>뭐가 <span class="fontRed">문제</span>일까?</h3></div>
+	<div class="wrap flex">
+		<div class="flexHalf">
+				<p class="reason1"> 언어의 본질은 소통이다. 외래어 남용은 언어 소외계층을 만들어내고, 외래어로 인한 언어 소외계층 형성은 세대 간의 소통 단절을 불러일으킨다. 의사소통의 단절은 세대 간 갈등으로 이어지는 지름길이다. 성기지 한글학회 연구편찬실장은 “모든 국민이 외국어에 능숙하지 않고, 또 능숙해야 할 의무도 없다.”면서 “그런데 외국어가 지속적으로 남용되면 급기야 외국어 능력에 따라 알 권리를 침해당하는 상황이 발생할지도 모른다.”고 우려했다.</p>
+				<h5 class="reasonBox1">소통의 부재</h5></div>
+		<div class="flexHalf">
+			<p class="reason2"> 외국어는 꽤 오래 전부터 우리 삶에 깊게 스며들어 습관처럼 사용되고 있다. 이러한 추세라면 앞으로 한글의 입지가 줄어들지도 모른다. 안태형 동아대 국어문화원 특별연구원은 "단어라는 것은 기본적으로 생성, 성장, 소멸의 단계를 거친다. 확대하면 언어도 언어들은 소멸되는 시기가 많이 늦춰진다. 사용하는 것은 계속 살아남고 사용하지 않는 것은 소멸되는 단계를 거치게 된다. 그래서 지금 추세로 두게 된다면은 많은 우리 어휘들이 외국어나 외래어에 의해서 사라질 확률이 높다."고 말했다. </p>
+			<h5 class="reasonBox2">언어 소멸의 위험</h5></div>
+	</div>
+
+</section>
+
+
+
+<section class="back_black morePad">
+	<div class="wrap">
+		<li> <a><h1>들어는 봤나, 다듬은 말</h1></a>
+		<b><p class="fontWhite center">'지나치게 어려운 말이나 비규범적인 말, 외래어 따위를 알기 쉽고 규범적인 상태로 또는 고유어를 순화한 말을 이른다'고 정의하고 있다. '순화어'라는 말 자체도 한자어여서 순화어 대신 <mark>'다듬은 말'</mark>이라고 한다.</p></b>
+</section>
+
+
+
+
+<style>
+
+		.backopa1{width: 100%; height: 700px; background: url(good.png); opacity: 0.3;
+		 background-size: 250px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; padding: 0;}
+    .backopa2{width: 100%; height: 700px; background: url(bad.png); opacity: 0.3;
+		 background-size: 250px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; padding: 0;}	
+		.bottom{display: none}
+		.top{display: block}
+	  #ch1:checked ~ .bottom{display: block}
+	  #ch1:checked ~ .top{display: none}
+	  #ch2:checked ~ .bottom{display: block}
+	  #ch2:checked ~ .top{display: none}
+	  .base{width: 1000px; text-align:center; position: absolute; left:0; top:200px;}
+
+	  
+</style>
+<section style="position: relative; height: 700px; padding-top: 0px; padding-bottom: 0px;">
+	<div class="backopa1"></div>
+	<div class="wrap flexCheck ab down" style="top:0px; left:calc(50% - 500px);">
+			<input type="checkbox" id="ch1"> 
+				<label for="ch1" id="la1"><p class="gra4 checkfont noMar">자주 사용되는 단어로 보기</p></label>
+		<p class="base bottom nanum">어제 <span class="aqua">치팅 데이</span>라서<br> 엽떡에 허니콤보 <span class="aqua">페어링</span>해서<br>먹었더 속이 더부룩하네 😣 <br><span class="aqua">디톡스</span>해야겠다</p>
+		
+		<p class="base top nanum">어제 <span class="fontRed">먹요일</span>이라서<br>엽떡에 허니콤보 <span class="fontRed">맛조합</span>해서<br>먹었더니 속이 더부룩하네 😣 <br><span class="fontRed">해독</span>해야겠다</p>
+		
+	
+	</div>
+</section>
+
+
+
+
+
+	<section class="back_red">
+		<div class="wrap flex lessPad">
+		<h3>잘 다듬은 말 </h3>
+		<h4>단어에 마우스를 갖다 대어 어떤 뜻인지 확인해 보세요</h4>
+		</div>
+		<div class="wrap btwnbox"> <h4 class="noMar">기준: 직관적으로 이해하기 쉬움, 형태적으로 짧음</h4></div>
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '리플'; " onmouseout="this.innerText = '댓글'">댓글</div> <div class="box" onmouseover="this.innerText = '언택트'; " onmouseout="this.innerText = '비대면'">비대면</div> <div class="box" onmouseover="this.innerText = '신입생'; " onmouseout="this.innerText = '새내기'">새내기</div> <div class="box" onmouseover="this.innerText = '보이스피싱'; " onmouseout="this.innerText = '전화 금융 사기'">전화 금융 사기</div> <div class="box" onmouseover="this.innerText = 'ESG 경영'; " onmouseout="this.innerText = '환경 사회 투명 경영'">환경 사회 투명 경영</div>
+	</div>
+	<div class="wrap flex btwnbox">
+		<div class="box"  onmouseover="this.innerText = '네티즌'; " onmouseout="this.innerText = '누리꾼'">누리꾼</div> <div class="box" onmouseover="this.innerText = '자동 제세동기'; " onmouseout="this.innerText = '심장 충격기'">심장 충격기</div> <div class="box" onmouseover="this.innerText = '스크린 도어'; " onmouseout="this.innerText = '안전문'">안전문</div> <div class="box" onmouseover="this.innerText = '블랙 아이스'; " onmouseout="this.innerText = '도로 살얼음'">도로 살얼음</div> <div class="box" onmouseover="this.innerText = '키스 앤드 라이드'; " onmouseout="this.innerText = '환승 정차 구역'">환승 정차 구역</div>
+	</div>
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '언론 플레이'; " onmouseout="this.innerText = '여론 몰이'">여론 몰이</div> <div class="box" onmouseover="this.innerText = '부스터 샷'; " onmouseout="this.innerText = '추가 접종'">추가 접종</div> <div class="box" onmouseover="this.innerText = '펫코노미'; " onmouseout="this.innerText = '반려동물산업'">반려동물산업</div> <div class="box" onmouseover="this.innerText = '대합실'; " onmouseout="this.innerText = '맞이방'">맞이방</div> <div class="box" onmouseover="this.innerText = '멀웨어'; " onmouseout="this.innerText = '악성 프로그램'">악성 프로그램</div>
+	</div>
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '버추얼 휴먼'; " onmouseout="this.innerText = '가상 인간'">가상 인간</div> <div class="box" onmouseover="this.innerText = '서클'; " onmouseout="this.innerText = '동아리'">동아리</div> <div class="box" onmouseover="this.innerText = '벌크 업'; " onmouseout="this.innerText = '근육 키우기'">근육 키우기</div> <div class="box" onmouseover="this.innerText = '싱크홀'; " onmouseout="this.innerText = '땅꺼짐'">땅꺼짐</div> <div class="box" onmouseover="this.innerText = '퍼스널 컬러'; " onmouseout="this.innerText = '맞춤 색상'">맞춤 색상</div>
+	</div>
+
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '커리어 하이'; " onmouseout="this.innerText = '최고 기록'">최고 기록</div> <div class="box" onmouseover="this.innerText = '시다바리'; " onmouseout="this.innerText = '보조원'">보조원</div> <div class="box" onmouseover="this.innerText = '유도리'; " onmouseout="this.innerText = '유연성'">유연성</div> <div class="box" onmouseover="this.innerText = '멘토'; " onmouseout="this.innerText = '길잡이'">길잡이</div> <div class="box" onmouseover="this.innerText = '스쿨존'; " onmouseout="this.innerText = '어린이 보호 구역'">어린이 보호 구역</div>
+	</div>
+
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '블랙 컨슈머'; " onmouseout="this.innerText = '악덕 소비자'">악덕 소비자</div> <div class="box" onmouseover="this.innerText = '리사이클'; " onmouseout="this.innerText = '재활용'">재활용</div> <div class="box" onmouseover="this.innerText = '업사이클'; " onmouseout="this.innerText = '새 활용'">새 활용</div> <div class="box" onmouseover="this.innerText = '가이드 라인'; " onmouseout="this.innerText = '지침, 방침'">지침, 방침</div> <div class="box" onmouseover="this.innerText = '가드레일'; " onmouseout="this.innerText = '보호 난간'">보호 난간</div>
+	</div>
+
+
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '아카이브'; " onmouseout="this.innerText = '자료 보관소'">자료 보관소</div> <div class="box" onmouseover="this.innerText = '오픈 스페이스'; " onmouseout="this.innerText = '열린 쉼터'">열린 쉼터</div> <div class="box" onmouseover="this.innerText = '펫 로스 증후군'; " onmouseout="this.innerText = '반려동물 상실 증후군'">반려동물 상실 증후군</div> <div class="box" onmouseover="this.innerText = '리유저블'; " onmouseout="this.innerText = '다회용'">다회용</div> <div class="box" onmouseover="this.innerText = '페어링'; " onmouseout="this.innerText = '맛조합'">맛조합</div>
+	</div>
+
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '긱 워커'; " onmouseout="this.innerText = '초단기 노동자'">초단기 노동자</div> <div class="box" onmouseover="this.innerText = '치팅데이'; " onmouseout="this.innerText = '먹요일'">먹요일</div> <div class="box" onmouseover="this.innerText = '에어캡'; " onmouseout="this.innerText = '뽁뽁이'">뽁뽁이</div> <div class="box" onmouseover="this.innerText = '니치마켓'; " onmouseout="this.innerText = '틈새시장'">틈새시장</div> <div class="box" onmouseover="this.innerText = '돈부리'; " onmouseout="this.innerText = '덮밥'">덮밥</div>
+	</div>
+
+
+</section>
+
+<section style="position: relative; height: 700px; padding-top: 0px; padding-bottom: 0px;">
+	<div class="backopa2"></div>
+	<div class="wrap flexCheck ab down" style="top:0px; left:calc(50% - 500px);">
+			<input type="checkbox" id="ch2"> 
+				<label for="ch2" id="la2"><p class="gra4 checkfont noMar">자주 사용되는 단어로 보기</p></label>
+		<p class="base bottom nanum"> <span class="aqua">브런치</span> 맛집 <span class="aqua">서치</span>했는데<br> 어떤 <span class="aqua">블로그</span>들어갔다가<br><span class="aqua">스포일러</span>당했어 😡<br>내일 <span class="aqua">리클라이너</span>관에서 보려고 했는데</p>
+		
+		<p class="base top nanum"><span class="fontRed">어울참</span> 맛집 <span class="fontRed">검색</span>했는데<br> 어떤 <span class="fontRed">누리사랑방</span>들어갔다가<br><span class="fontRed">영화헤살꾼</span>당했어 😡<br>내일 <span class="fontRed">각도 조절 의자</span>관에서 보려고 했는데</p>
+		
+	
+	</div>
+</section>
+
+	<section class="back_red">
+		<div class="wrap flex lessPad">
+		<h3>못 다듬은 말 </h3>
+		<h4>단어에 마우스를 갖다 대어 어떤 뜻인지 확인해 보세요</h4>
+		</div>
+		<div class="wrap btwnbox"> <h4 class="noMar">기준: 입에 잘 붙지 않음 / 의미 전달 안 됨 / <span class="blue">직관적이지 않음</span> / <span class="green">의미를 다 담지 못함</span> / <span class="purple"> 단순 나열</span> / <span class="orange">여전히 다듬지 못한 말 존재</span> / <span class="tan">해석 오류</span></h4></div>
+
+	<div class="wrap flex btwnbox">
+		<div class="obox" onmouseover="this.innerText = '리플'; " onmouseout="this.innerText = '댓글'">댓글</div> <div class="box" onmouseover="this.innerText = '언택트'; " onmouseout="this.innerText = '비대면'">비대면</div> <div class="box" onmouseover="this.innerText = '신입생'; " onmouseout="this.innerText = '새내기'">새내기</div> <div class="bbox" onmouseover="this.innerText = '보이스피싱'; " onmouseout="this.innerText = '전화 금융 사기'">전화 금융 사기</div> <div class="box" onmouseover="this.innerText = 'ESG 경영'; " onmouseout="this.innerText = '환경 사회 투명 경영'">환경 사회 투명<br>경영</div>
+	</div>
+	<div class="wrap flex btwnbox">
+		<div class="box"  onmouseover="this.innerText = '네티즌'; " onmouseout="this.innerText = '누리꾼'">누리꾼</div> <div class="tbox" onmouseover="this.innerText = '자동 제세동기'; " onmouseout="this.innerText = '심장 충격기'">심장 충격기</div> <div class="pbox" onmouseover="this.innerText = '스크린 도어'; " onmouseout="this.innerText = '안전문'">안전문</div> <div class="box" onmouseover="this.innerText = '블랙 아이스'; " onmouseout="this.innerText = '도로 살얼음'">도로 살얼음</div> <div class="box" onmouseover="this.innerText = '키스 앤드 라이드'; " onmouseout="this.innerText = '환승 정차 구역'">환승 정차 구역</div>
+	</div>
+	<div class="wrap flex btwnbox">
+		<div class="box" onmouseover="this.innerText = '언론 플레이'; " onmouseout="this.innerText = '여론 몰이'">여론 몰이</div> <div class="gbox" onmouseover="this.innerText = '부스터 샷'; " onmouseout="this.innerText = '추가 접종'">추가 접종</div> <div class="box" onmouseover="this.innerText = '펫코노미'; " onmouseout="this.innerText = '반려동물산업'">반려동물산업</div> <div class="box" onmouseover="this.innerText = '대합실'; " onmouseout="this.innerText = '맞이방'">맞이방</div> <div class="box" onmouseover="this.innerText = '멀웨어'; " onmouseout="this.innerText = '악성 프로그램'">악성 프로그램</div>
+
+	
+</section>
+
+<section>
+	<div class="wrap btwn underPad">
+		<h3 style="line-height: 1.1;"><span style="font-size:1.3rem; padding-bottom:0; color:#616161;">외국어 남용의 숨겨진 <span class="fontRed">1등</span> 공신</span><br>대한민국 정부</h3></div>
+	<div class="wrap">
+		<img style="margin: auto; display: block; width: 60vw; padding-bottom: 50px;" src="poster.gif"></div>
+
+	<div class="wrap" style="word-break: keep-all; font-family: Pretendard-Medium;"><p>국어기본법 제14조 1항에 의거하면 공공기관 등은 공문서를 일반 국민이 알기 쉬운 용어와 문장으로 써야 하며, 어문규범에 맞추어 한글로 작성해야 한다.</p>
+<p>그러나 한글문화연대에 따르면 2022년 1월부터 8월까지 중앙정부기관에서 낸 보도자료 1만1918건 가운데 5501건에서 외국어 표현·표기 남용이 확인됐다.‘가이드라인’, ‘거버넌스’, ‘아카이브’ 등이 대표적이다. 서은아 상명대 계당교양교육원 교수는 “오랫동안 공공 언어 사용 실태를 평가하고 연구해왔지만 공공기관이 발표하는 사업과 정책의 이름은 매년 낯설다”며 “‘Safety House 구축 사업’, ‘스마트팜 테스트베드 교육장’, ‘원도심 아프프리마켓’, ‘손愛손 Job Go’ 등 사업 뜻을 짐작하기 어렵거나 배경을 이해할 수 없는 것들이 태반”이라고 지적했다. 또한 대체할 수 있는 단어가 있음에도 영어를 쓰는 경우도 많았다. 2019년, 광주지자체가 추진하는 사업 명칭에 대한 지적이 있었다. 헌책방 르네상스, 클린업 동구와 같은 외래어 혼용사례가 많았다. 다른 지자체나 기업에서도 ‘** 페스티벌’, ‘** 버스킹’ 등과 같은 사업명이 자주 등장했다. 2020년 7월에는 교육부의 사업 명칭이 논란이 되기도 했다. ‘그린스마트 미래학’, ‘블렌디드 러닝’이 중심에 있었다. 사업 내용을 확인해보면 결국 ‘친환경 첨단 학교’와 ‘온ㆍ오프라인 수업 병행’을 뜻한다. 공공기관 홍보 대행사에서 일하는 김유진 씨도 “가끔은 정부가 주도적으로 외국어 사용을 권장하는 것이 아닐까 싶은 생각이 들기도 한다”면서 “기업이나 브랜드에서 마케팅의 수단으로 활용하는 상술의 관점이 공공의 영역에 들어가 있는 모양새다. 관료사회다 보니 지금의 결과를 내는 데 급급해 놓치는 것이 많은 것 같다”고 아쉬움을 표했다.</p>
+
+
+
+<p>공공언어가 쉬운 우리말로 쓰여야 하는 이유는 정부 정책, 법과 제도, 행정 절차 등을 <mark>안내하는 역할</mark>을 하기 때문이다. 국민들이 알기 어려운 어휘를 사용한다면 국민의 안전을 위협할 수 있으며, 재산상의 손실을 가져올 수도 있다.  국민 입장에서는 정부에서 시행하는 정책에 대해 알 수가 없기 때문에, 자기에게 어떤 기회가 오는지 또는 피해가 오는지 파악할 수 없다. 이는 보건과 복지 혜택의 <mark>기회를 빼앗는 결과</mark>를 초래할 수  있다.</p>
+
+
+<p>어렵게 쓴 공공언어는 공공의 이익을 박탈하는 <mark>차별과 불통의 언어</mark>다. </p></div>
+
+</section>
+
+<section class="morePad">
+	<div class="wrap flex">
+		<div> <a href="https://youtu.be/CqfsHF85Ago?si=_u66M9reKkqAc4Rr" target="_new">
+			<img class="imgsize" src="news_4.png"></a> </div>
+
+	<div> <a href="https://youtu.be/ML4c55F0WNc?si=ZJlTwwxxc7GbffX2" target="_new">
+			<img class="imgsize"  src="news_5.png"></a> </div>	
+
+
+	<div> <a href="https://www.youtube.com/watch?v=dmFOXX7L4iM" target="_new">
+			<img class="imgsize"  src="news_6.png"></a>	</div>
+</div>
+</section>
+
+</html>
